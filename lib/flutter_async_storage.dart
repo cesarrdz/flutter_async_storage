@@ -156,7 +156,7 @@ class AsyncStorageIOS implements AsyncStorageReader {
     // Storing data in the Documents directory should be avoided, but in
     // this case we need to access it to port data from the legacy React Native
     // app.
-    final docDir = await getApplicationDocumentsDirectory();
+    final docDir = await getApplicationSupportDirectory();
     return Directory('${docDir.path}/$_iosDataDirectory');
   }
 
