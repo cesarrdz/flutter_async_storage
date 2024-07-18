@@ -29,14 +29,6 @@ import 'package:sqflite/sqflite.dart';
 ///
 /// Error handling on public methods should be handled by the end user.
 abstract class AsyncStorageReader {
-  factory AsyncStorageReader() {
-    if (Platform.isAndroid) return AsyncStorageAndroid();
-    if (Platform.isIOS) return AsyncStorageIOS();
-    // Unit tests run on Linux.
-    if (Platform.isLinux) return AsyncStorageTestOnly();
-    throw UnimplementedError('Unrecognized platform');
-  }
-
   /// Whether there is AsyncStorage data available.
   Future<bool> exists();
 
