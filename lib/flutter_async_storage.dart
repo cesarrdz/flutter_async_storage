@@ -120,7 +120,8 @@ class AsyncStorageAndroid implements AsyncStorageReader, Disposable {
 }
 
 /// Directory containing AsyncStorage data on iOS.
-const _iosDataDirectory = 'RCTAsyncLocalStorage_V1';
+const _iosDataDirectory =
+    'com.softcontrolsinternational.leticaios/RCTAsyncLocalStorage_V1';
 
 /// File containing some AsyncStorage data and paths to other data files.
 const _iosManifestFilename = 'manifest.json';
